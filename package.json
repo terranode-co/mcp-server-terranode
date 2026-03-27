@@ -1,0 +1,54 @@
+{
+  "name": "@terranode-co/mcp-server",
+  "version": "0.1.8",
+  "mcpName": "io.github.terranode-co/mcp-server-terranode",
+  "description": "MCP server for spatial queries via the Terranode Geospatial API",
+  "type": "module",
+  "bin": {
+    "terranode-mcp-server": "dist/index.js"
+  },
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/terranode-co/mcp-server-terranode"
+  },
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "geospatial",
+    "terranode",
+    "spatial",
+    "gis",
+    "point-in-polygon",
+    "nearest-feature",
+    "spatial-join"
+  ],
+  "author": {
+    "name": "Terranode",
+    "email": "dev@terranode.co",
+    "url": "https://terranode.co"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.1",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.7.0",
+    "vitest": "^3.0.0"
+  }
+}
