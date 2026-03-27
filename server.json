@@ -4,7 +4,7 @@
   "title": "Terranode Geospatial API",
   "description": "Point-in-polygon, nearest feature, spatial join, and distance tools for US geospatial datasets",
   "version": "0.1.8",
-  "websiteUrl": "https://docs.terranode.co/integrations/mcp-server",
+  "websiteUrl": "https://docs.terranode.co/integrations/mcp/",
   "repository": {
     "url": "https://github.com/terranode-co/mcp-server-terranode",
     "source": "github",
