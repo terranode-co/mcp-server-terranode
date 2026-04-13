@@ -84,6 +84,10 @@ Try these in Claude Desktop or Cursor:
 - "Which states do these 5 warehouse locations fall in?" (paste coordinates)
 - "What ZIP code is 37.7749, -122.4194 in?"
 
+## API Reference
+
+The full API spec is available at [docs.terranode.co/openapi.yaml](https://docs.terranode.co/openapi.yaml) (OpenAPI 3.1).
+
 ## Feedback
 
 Report issues or feature requests: [feedback@terranode.co](mailto:feedback@terranode.co)

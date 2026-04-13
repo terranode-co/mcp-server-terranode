@@ -1,6 +1,6 @@
 {
   "name": "@terranode-co/mcp-server",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "mcpName": "io.github.terranode-co/mcp-server-terranode",
   "description": "MCP server for spatial queries via the Terranode Geospatial API",
   "type": "module",
@@ -21,6 +21,7 @@
   "files": [
     "dist"
   ],
+  "homepage": "https://docs.terranode.co",
   "repository": {
     "type": "git",
     "url": "https://github.com/terranode-co/mcp-server-terranode"

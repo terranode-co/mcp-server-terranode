@@ -11,9 +11,12 @@ import * as checkLocation from "./tools/check-location.js";
 import * as findNearest from "./tools/find-nearest.js";
 import * as calculateDistance from "./tools/calculate-distance.js";
 import * as spatialJoin from "./tools/spatial-join.js";
+import * as enrichLocation from "./tools/enrich-location.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const pkg = JSON.parse(readFileSync(join(__dirname, "..", "package.json"), "utf-8"));
+const pkg = JSON.parse(
+  readFileSync(join(__dirname, "..", "package.json"), "utf-8"),
+);
 
 const DEFAULT_API_URL = "https://api.terranode.co";
 
@@ -52,7 +55,9 @@ function wrapHandler<T>(
     try {
       const result = await fn(client, args);
       return {
-        content: [{ type: "text" as const, text: JSON.stringify(result, null, 2) }],
+        content: [
+          { type: "text" as const, text: JSON.stringify(result, null, 2) },
+        ],
       };
     } catch (err) {
       const message =
@@ -104,6 +109,13 @@ server.tool(
   spatialJoin.description,
   spatialJoin.inputSchema,
   wrapHandler(spatialJoin.name, spatialJoin.handler),
+);
+
+server.tool(
+  enrichLocation.name,
+  enrichLocation.description,
+  enrichLocation.inputSchema,
+  wrapHandler(enrichLocation.name, enrichLocation.handler),
 );
 
 // Start server
